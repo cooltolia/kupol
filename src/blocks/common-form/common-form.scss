@@ -1,0 +1,44 @@
+@import '../custom-textarea/custom-textarea.scss';
+@import '../custom-input/custom-input.scss';
+@import '../custom-checkbox/custom-checkbox.scss';
+
+.common-form {
+    &__input {
+        margin-bottom: 10px;
+
+        .star-rating {
+            justify-content: space-between;
+            padding-bottom: 14px;
+        }
+    }
+
+    &__legal {
+        margin: 16px 0;
+    }
+
+    &__submit {
+        @include btn-reset;
+        padding: 10px 24px;
+        width: 100%;
+
+        color: $text-color;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 700;
+
+        background-color: $yellow;
+        border-radius: 99px;
+
+        cursor: pointer;
+    }
+}
+
+@media #{$tablet} {
+    .common-form {
+    }
+}
+
+@media #{$desktop} {
+    .common-form {
+    }
+}

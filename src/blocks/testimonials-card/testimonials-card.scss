@@ -1,0 +1,84 @@
+.testimonials-card {
+    position: relative;
+    padding: 32px;
+    padding-bottom: 48px;
+
+    background: #fbfbfb;
+    box-shadow: 2px 2px 27px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+    &::before {
+        position: absolute;
+        width: 58px;
+        height: 44px;
+        top: 32px;
+        right: 32px;
+
+        background-image: url(/assets/images/svg/quote-green.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__author {
+        margin-bottom: 16px;
+    }
+
+    &__name {
+        margin-bottom: 8px;
+
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.6;
+    }
+
+    &__post {
+        color: $text-color-light;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    &__rating {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin-bottom: 8px;
+
+        p {
+            margin: 0 0 12px;
+
+            font-size: 14px;
+            line-height: 1.6;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__more {
+        @include btn-reset;
+
+        font-size: 12px;
+        line-height: 1.6;
+        color: $text-color-light;
+
+        transition: color 300ms ease;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
+
+@media #{$tablet} {
+    .testimonials-card {
+    }
+}
+
+@media #{$desktop} {
+    .testimonials-card {
+    }
+}

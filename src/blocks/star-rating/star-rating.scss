@@ -1,0 +1,73 @@
+.star-rating {
+    display: flex;
+    align-items: center;
+
+    pointer-events: none;
+
+    &.js-interactive {
+        .star-rating__star {
+            pointer-events: all;
+        }
+    }
+
+    &__radio {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &__label {
+        padding-right: 12px;
+
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    &__stars {
+        display: inline-flex;
+        flex-flow: row-reverse nowrap;
+        align-items: center;
+    }
+
+    &__star {
+        position: relative;
+        width: 26px;
+        height: 24px;
+        margin-left: 10px;
+
+        cursor: pointer;
+
+        pointer-events: none;
+
+        &:last-child {
+            margin-left: 0;
+        }
+
+        svg {
+            @include svg-icon;
+            fill: #ebeced;
+            pointer-events: none;
+
+            transition: 0.2s ease-in-out;
+        }
+
+        &.filled {
+            ~ .star-rating__star svg,
+            svg {
+                fill: $yellow;
+            }
+        }
+
+        &:hover {
+            svg {
+                filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.13));
+            }
+        }
+
+        &:active {
+            svg {
+                transform: scale(0.9);
+            }
+        }
+    }
+}

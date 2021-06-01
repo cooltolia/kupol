@@ -1,0 +1,12 @@
+mixin custom-input({ inputType = 'text', id, name, label = false, placeholder = false, required = false, error = false, isValid = false, floatLabel = false })
+    +b.custom-input(class=isValid ? 'valid' : '')
+        if (label)
+            +e.LABEL.label(for=id)= label
+                if (required)
+                    span *
+        if (required)
+            +e.INPUT.input(class=floatLabel ? 'float-label' : '' type=inputType id=id name=name placeholder=placeholder required='')&attributes(attributes)
+        else
+            +e.INPUT.input(class=floatLabel ? 'float-label' : '' type=inputType id=id name=name placeholder=placeholder)&attributes(attributes)
+        if (error)
+            +e.SPAN.error.error= error

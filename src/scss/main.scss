@@ -1,0 +1,26 @@
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@import 'normalize.css';
+
+//settings
+@import './variables';
+@import './helpers';
+
+@import '../blocks/feedback-modal/feedback-modal';
+@import '../blocks/video-modal/video-modal';
+@import '../blocks/video-appeal/video-appeal';
+@import '../blocks/video-trigger-btn/video-trigger-btn';
+@import '../blocks/blockquote-snippet/blockquote-snippet';
+@import '../blocks/sidebar-service/sidebar-service';
+@import '../blocks/testimonials-list/testimonials-list';
+@import '../blocks/testimonials-slider/testimonials-slider';
+@import '../blocks/testimonials-card/testimonials-card';
+@import '../blocks/testimonial-modal-card/testimonial-modal-card';
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: teal;
+}

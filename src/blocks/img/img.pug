@@ -1,0 +1,5 @@
+mixin img(path, lazyLoad = false)
+    if (lazyLoad)
+        img.lazy-img(data-src=`/assets/images/${path}`, alt="")&attributes(attributes)
+    else
+        img(src=`/assets/images/${path}`, alt="")&attributes(attributes)

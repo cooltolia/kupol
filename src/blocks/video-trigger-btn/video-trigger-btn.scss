@@ -1,0 +1,51 @@
+.video-trigger-btn {
+    @include btn-reset;
+    position: relative;
+    width: 100%;
+    padding: 20px 16px;
+    max-width: 280px;
+    padding-left: 94px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: $text-color;
+    text-align: left;
+
+    background-color: #ffca41;
+    border-radius: 16px;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: opacity 300ms ease;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 66px;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        background-image: url(/assets/images/svg/camera.svg);
+        background-size: 26px 21px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(#ff9a0d, 0.3);
+        border-radius: 16px;
+    }
+}
+
+@media #{$tablet} {
+    .video-trigger-btn {
+    }
+}
+
+@media #{$desktop} {
+    .video-trigger-btn {
+    }
+}

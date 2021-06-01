@@ -1,0 +1,27 @@
+include ../common-form/common-form
+include ../star-rating/star-rating
+
+mixin feedback-modal()
+    +b.feedback-modal
+        .modal(id='feedbackModal' aria-hidden='true')
+            .modal__overlay(tabindex='-1' data-micromodal-close='')
+                .modal__dialog(role='dialog' aria-modal='true')
+                    +e.wrapper
+                        +e.body
+                            +e.header
+                                +e.BUTTON.close.modal__close(aria-label='Закрыть окно' data-micromodal-close='')
+                                    include ../../../src/assets/images/svg/close.svg
+                                +e.title Оставить отзыв
+                            +e.form
+                                +common-form
+                                    +e.input
+                                        +custom-input({id: 'feedbackName', name: 'feedback-name', required: true, placeholder: 'ФИО'})(data-validate='text')
+                                    +e.input
+                                        +custom-input({id: 'feedbackEmail', name: 'feedback-email', required: true, placeholder: 'myemail@mail'})(data-validate='email')
+                                    +e.input
+                                        +star-rating(true, 'Оцените программу:')
+                                    +e.input
+                                        +custom-textarea({id: 'feedbackComment', name: 'feedback-comment', placeholder: 'Чирканите пару строчек'})
+                                    +e.BUTTON.submit(type='submit') Отправить резюме
+                                    +e.legal
+                                        +custom-checkbox({id: 'feedbackAgree', name: 'feedback-agree', label: 'Нажимая кнопку я соглашаюсь <br> <a href="#">с Политикой конфиденциальности</a>'})(checked='')

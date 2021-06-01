@@ -1,0 +1,46 @@
+include ../bemto/bemto
+include pug/header
+
+include blocks/img/img
+include blocks/picture-helper/picture-helper
+
+//- common blocks
+include blocks/feedback-modal/feedback-modal
+include blocks/blockquote-snippet/blockquote-snippet
+include blocks/video-modal/video-modal
+include blocks/video-appeal/video-appeal
+include blocks/video-trigger-btn/video-trigger-btn
+include blocks/sidebar-service/sidebar-service
+include blocks/testimonials-list/testimonials-list
+include blocks/testimonials-slider/testimonials-slider
+include blocks/testimonials-card/testimonials-card
+include blocks/testimonial-modal-card/testimonial-modal-card
+
+doctype html
+html(lang="ru")
+    +doc-header
+    body(style='height: 2000px; background-color: #f3f3f3')
+        .container(style='max-width: 1200px; padding: 16px; margin: 0 auto;')
+            +blockquote-snippet
+            br
+            br
+            br
+            +video-appeal
+            br
+            br
+            br
+            +testimonials-list
+            br
+            br
+            br
+            .aside(style='max-width: 320px')
+                +video-trigger-btn
+                br
+                br
+                +sidebar-service
+        +feedback-modal
+        +video-modal
+        +testimonial-modal-card
+        script(src='./js/used-vendors.js')
+        script(src='./js/new-vendors.js')
+        script(src='./js/main.js')

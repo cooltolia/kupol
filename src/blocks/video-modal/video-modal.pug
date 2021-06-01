@@ -1,0 +1,7 @@
+mixin video-modal
+    +b.video-modal.modal#videoModal(aria-hidden='true')
+        .modal__overlay(tabindex='-1' data-micromodal-close='')
+            +e.body.modal__dialog(role='dialog' aria-modal='true' aria-labelledby='Просмотр видео')
+                +e.BUTTON.close.modal__close(aria-label='Закрыть окно' data-micromodal-close='')
+                    include ../../../src/assets/images/svg/close.svg
+                iframe(width='100%' height='100%' frameborder='0' allow='autoplay' allowfullscreen)

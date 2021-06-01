@@ -1,0 +1,25 @@
+mixin star-rating(interactive = false, label = false)
+    +b.star-rating(class=interactive ? 'js-interactive' : '')
+        if (label)
+            +e.label !{label}
+        +e.stars
+            +e.star
+                include ../../../src/assets/images/svg/star.svg
+                if (interactive)
+                    +e.INPUT.radio(type='radio' name='starRating' value='5')
+            +e.star.filled
+                include ../../../src/assets/images/svg/star.svg
+                if (interactive)
+                    +e.INPUT.radio(type='radio' name='starRating' value='4' checked)
+            +e.star
+                include ../../../src/assets/images/svg/star.svg
+                if (interactive)
+                    +e.INPUT.radio(type='radio' name='starRating' value='3')
+            +e.star
+                include ../../../src/assets/images/svg/star.svg
+                if (interactive)
+                    +e.INPUT.radio(type='radio' name='starRating' value='2')
+            +e.star
+                include ../../../src/assets/images/svg/star.svg
+                if (interactive)
+                    +e.INPUT.radio(type='radio' name='starRating' value='1')

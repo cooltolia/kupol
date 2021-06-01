@@ -1,0 +1,12 @@
+mixin custom-textarea({id, name, label = false, placeholder = false, required = false, error = false, isValid = false, floatLabel = true})
+    +b.custom-textarea(class=isValid ? 'valid' : '')
+        if (label)
+            +e.LABEL.label(for=id)= label
+                if (required)
+                    span *
+        if (required)
+            +e.TEXTAREA.input(class=floatLabel ? 'float-label' : '' id=id name=name placeholder=placeholder required)&attributes(attributes)
+        else
+            +e.TEXTAREA.input(class=floatLabel ? 'float-label' : '' id=id name=name placeholder=placeholder)&attributes(attributes)
+        if (error)
+            +e.SPAN.error.error= error

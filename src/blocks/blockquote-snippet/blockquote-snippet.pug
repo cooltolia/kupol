@@ -1,0 +1,16 @@
+mixin blockquote-snippet()
+    +b.FIGURE.blockquote-snippet
+        +e.media
+            +e.image
+                +img('quote-poster.jpg')
+            +e.BUTTON.play.js-video-trigger(data-video-id='Vmb1tqYqyII')
+                include ../../assets/images/svg/play-btn.svg
+        +e.body
+            +e.BLOCKQUOTE.content
+                +e.P.cite «Акционеры крупнейших компаний неоднозначны и будут функционально разнесены на независимые элементы. В рамках спецификации современных стандартов, непосредственные участники технического прогресса разоблачены. Сложно сказать, почему активно.»
+            +e.FIGCAPTION.author
+                +e.author-avatar
+                    +img('author.jpg')
+                +e.author-data
+                    +e.name Высоцкий В.М.
+                    +e.post Генеральный директор <br>ООО «АЛЕВ Строй»

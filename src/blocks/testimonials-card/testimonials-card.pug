@@ -1,0 +1,14 @@
+include ../star-rating/star-rating
+
+mixin testimonials-card(mod = '', more = true)
+    +b.testimonials-card(class=mod)
+        +e.header
+            +e.author
+                +e.name Высоцкий В.М.
+                +e.post Генеральный директор ООО АЛЕВ Строй»
+            +e.rating
+                +star-rating(false)
+        +e.text
+            block
+        if (more)
+            +e.BUTTON.more.js-testimonial-full(type='button' data-id='1') Читать весь отзыв

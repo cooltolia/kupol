@@ -15,6 +15,7 @@ include blocks/testimonials-list/testimonials-list
 include blocks/testimonials-slider/testimonials-slider
 include blocks/testimonials-card/testimonials-card
 include blocks/testimonial-modal-card/testimonial-modal-card
+include blocks/program-testimonials/program-testimonials
 
 doctype html
 html(lang="ru")
@@ -33,6 +34,14 @@ html(lang="ru")
             br
             br
             br
+            +testimonials-slider
+            br
+            br
+            br
+            button(data-modal='programTestimonialsModal') Отзывы о программе
+            br
+            br
+            br
             .aside(style='max-width: 320px')
                 +video-trigger-btn
                 br
@@ -41,6 +50,7 @@ html(lang="ru")
         +feedback-modal
         +video-modal
         +testimonial-modal-card
+        +program-testimonials
         script(src='./js/used-vendors.js')
         script(src='./js/new-vendors.js')
         script(src='./js/main.js')

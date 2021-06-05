@@ -62,6 +62,7 @@
         font-size: 12px;
         line-height: 1.6;
         color: $text-color-light;
+        text-decoration: underline;
 
         transition: color 300ms ease;
 
@@ -73,8 +74,29 @@
     }
 }
 
-@media #{$tablet} {
+@media #{$laptop} {
     .testimonials-card {
+        &.type2 {
+            .testimonials-card__header {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                border-bottom: 1px solid rgba($text-color-medium, 0.2);
+            }
+
+            .testimonials-card__author {
+                padding-right: 24px;
+                margin-bottom: 0;
+            }
+
+            .testimonials-card__rating {
+                flex: 0 0 auto;
+                margin-bottom: 0;
+            }
+        }
     }
 }
 

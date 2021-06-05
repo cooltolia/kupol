@@ -1,47 +1,57 @@
-.video-modal {
-    &__body {
-        position: relative;
-        width: calc(100% - 48px);
-        max-width: 150vh;
+@import '../modal/modal.scss';
 
-        background: #ffffff;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.04);
-
-        &::before {
-            content: '';
-            position: relative;
-            display: table;
-            padding-top: 56.25%;
-        }
-
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+.testimonial-modal-card {
+    .testimonials-card {
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
     }
 
-    &__close {
-        top: -50px;
-        right: 0px;
+    .modal__dialog {
+        overflow-y: auto;
+        padding: 16px;
+        display: block;
+        height: 100%;
+        width: 100%;
+        max-width: 700px;
+
+        @include hideScrollbar;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+    }
+
+    &__body {
+        position: relative;
+
+        margin: 0 auto;
+        padding: 55px 24px;
+        width: 100%;
+        max-width: 622px;
+
+        background: #fafafa;
+        border-radius: 16px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.04);
     }
 }
 
 @media #{$tablet} {
-    .video-modal {
-        &__body {
-            width: calc(100% - 64px);
+    .testimonial-modal-card {
+        .modal__dialog {
+            padding: 16px 32px;
         }
 
-        &__close {
-            right: -20px;
+        &__body {
+            padding: 72px 48px;
         }
     }
 }
 
 @media #{$desktop} {
-    .video-modal {
+    .testimonial-modal-card {
     }
 }

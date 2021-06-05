@@ -9,10 +9,8 @@ import { postData } from '~/js/common/ajax';
         const target = e.target;
         if (!(target instanceof HTMLButtonElement)) return;
 
-        if (target.dataset.modal) {
+        if (target.dataset.modal && target.dataset.modal === 'feedbackModal') {
             const targetModal = target.dataset.modal;
-
-            console.log(InputMethods);
 
             customModal.showModal(targetModal, {
                 onShown(modal) {

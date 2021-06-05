@@ -1,15 +1,120 @@
 .testimonials-slider {
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
 
+    &__title {
+        padding-right: 24px;
+
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+
+    &__controls {
+        width: 80px;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            @include btn-reset;
+            width: 32px;
+            height: 32px;
+            flex: 0 0 auto;
+
+            border-radius: 50%;
+            cursor: pointer;
+
+            background-image: url(/assets/images/svg/arrow.svg);
+            background-size: cover;
+
+            transition: opacity 300ms ease;
+
+            &.next {
+                transform: rotate(0.5turn);
+            }
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__slides {
+        margin-bottom: 32px;
+        margin-top: -16px;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+
+        &.flickity-resize {
+            .testimonials-slider__slide {
+                min-height: 100%;
+                display: flex;
+            }
+        }
+    }
+
+    &__slide {
+        width: 100%;
+        padding: 16px;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__appeal {
+        @include btn-reset;
+        padding: 10px 22px;
+
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 700;
+        color: $text-color;
+
+        background-color: $yellow;
+
+        border-radius: 99px;
+
+        transition: opacity 300ms ease;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
 }
 
 @media #{$tablet} {
     .testimonials-slider {
+        &__header {
+            margin-bottom: 40px;
+        }
 
+        &__title {
+            font-size: 24px;
+        }
+
+        &__slides {
+
+        }
+
+        &__slide {
+            width: 50%;
+            padding: 16px;
+        }
     }
 }
 
-@media #{$desktop} {
+@media #{$laptop} {
     .testimonials-slider {
-
+        &__title {
+            font-size: 32px;
+        }
     }
 }

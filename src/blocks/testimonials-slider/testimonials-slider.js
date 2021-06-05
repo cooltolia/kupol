@@ -1,5 +1,4 @@
 import Flickity from 'flickity';
-import 'flickity/dist/flickity.min.css';
 import FontFaceObserver from 'fontfaceobserver';
 
 Flickity.prototype._createResizeClass = function () {

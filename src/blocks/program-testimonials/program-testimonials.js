@@ -1,5 +1,4 @@
 import Flickity from 'flickity';
-import 'flickity/dist/flickity.min.css';
 import customModal from '~/js/common/Modal';
 import FontFaceObserver from 'fontfaceobserver';
 

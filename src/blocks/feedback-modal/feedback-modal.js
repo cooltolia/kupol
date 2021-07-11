@@ -36,6 +36,7 @@ import { postData } from '~/js/common/ajax';
 function feedbackModalInit(modal) {
     modal.modalInited = true;
     const form = modal.querySelector('form');
+    const action = form.action;
     const validateInputs = form.querySelectorAll('[data-validate]');
 
     InputMethods.setInputValidationHandlers(validateInputs);
@@ -61,8 +62,17 @@ function feedbackModalInit(modal) {
             return;
         }
 
-        customModal.closeModal(modal.id)
+        const formData = new FormData(form);
 
-        // postData()
+        customModal.closeModal(modal.id);
+
+        postData(action, { body: formData, headers: {} })
+            .then((data) => {
+                const message = data.success || data.error;
+                alert(message);
+            })
+            .finally(() => {
+                customModal.closeModal(modal.id);
+            });
     });
 }

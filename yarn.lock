@@ -3058,6 +3058,11 @@ fsevents@~2.3.1:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.1.tgz#b209ab14c61012636c8863507edf7fb68cc54e9f"
   integrity sha512-YR47Eg4hChJGAB1O3yEAOkGO+rlzutoICGqGo9EZ4lKWokzZRSyIW1QmTzqjtw8MJdj9srP869CuWw/hyzSiBw==
 
+fslightbox@^3.3.0-2:
+  version "3.3.0-2"
+  resolved "https://registry.yarnpkg.com/fslightbox/-/fslightbox-3.3.0-2.tgz#20c828ed1089cd04c03a5704032f9b8e935a6b1f"
+  integrity sha512-4v69NY58bh1ekr/h9mDMd4UTWyD+LE8WaDECI7l541rEXZp4vaItlk8Kz63NphDVwfXr0dtBsqxSkjIExtH/kQ==
+
 ftp-deploy@^2.3.7:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/ftp-deploy/-/ftp-deploy-2.4.0.tgz#7b7732a8ca79e78ed54f0293488ff6a0815cdae8"

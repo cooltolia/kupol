@@ -56,8 +56,10 @@
         }
     }
 
-    &__more {
+    &__more,
+    &__scan {
         @include btn-reset;
+        margin-bottom: 8px;
 
         font-size: 12px;
         line-height: 1.6;
@@ -71,11 +73,58 @@
         &:hover {
             color: $text-color;
         }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__scan {
+        display: flex;
+        align-items: center;
+
+        .icon {
+            width: 24px;
+            flex: 0 0 auto;
+            margin-right: 6px;
+
+            svg {
+                display: block;
+                max-width: 100%;
+                height: auto;
+
+                fill: currentColor
+            }
+        }
+    }
+
+    &__image {
+        padding-top: 24px;
+        display: block;
+        max-width: 360px;
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
     }
 }
 
 @media #{$laptop} {
     .testimonials-card {
+        display: flex;
+        align-items: flex-start;
+
+        &__content {
+            width: 60%;
+            flex: 1 1 auto;
+        }
+
+        &__image {
+            padding-top: 0;
+            padding-left: 32px;
+        }
+
         &.type2 {
             .testimonials-card__header {
                 margin-bottom: 24px;
